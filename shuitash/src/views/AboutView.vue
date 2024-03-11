@@ -1,8 +1,45 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <Pie :data="data" :options="options" />
 </template>
+
+
+
+<script lang="ts">
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
+import { Pie } from 'vue-chartjs'
+import * as chartConfig from '../stores/chartConfig.js'
+
+ChartJS.register(ArcElement, Tooltip, Legend)
+
+export default {
+  name: 'App',
+  components: {
+    Pie
+  },
+  data() {
+    return chartConfig
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <style>
 @media (min-width: 1024px) {
