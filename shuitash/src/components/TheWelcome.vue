@@ -1,22 +1,15 @@
 <template>
-  <div>
-
-  </div>
+  <div></div>
 </template>
 
 <script>
-  export default {
-    
-  }
-  async function getdata(){
-    let list = await fetch(`https://data.cityofnewyork.us/resource/swpk-hqdp.json`);
-    let data = await list.json();
-    data.forEach((i)=>console.log(i.borough))
-  }
+export default {}
+async function getdata() {
+  let list = await fetch(`https://data.cityofnewyork.us/resource/swpk-hqdp.json`)
+  let data = await list.json()
+}
 
-  getdata()
+getdata()
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
