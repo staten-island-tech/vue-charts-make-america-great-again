@@ -1,27 +1,27 @@
 <template>
-  <Pie :data="data" :options="options" />
+  <Doughnut :data="data" :options="options" />
 </template>
+
 
 
 
 <script lang="ts">
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
-import { Pie } from 'vue-chartjs'
-import * as chartConfig from '../stores/chartConfig.js'
+import { Doughnut } from 'vue-chartjs'
+import * as chartConfig from '../stores/chartConfig'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
 export default {
   name: 'App',
   components: {
-    Pie
+    Doughnut
   },
   data() {
     return chartConfig
   }
 }
 </script>
-
 
 
 
