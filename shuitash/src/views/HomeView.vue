@@ -1,9 +1,21 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <Pie :data="data" :options="options" />
 </template>
+
+<script>
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
+import { Pie } from 'vue-chartjs'
+import * as chartConfig from '../stores/chartconfig'
+
+ChartJS.register(ArcElement, Tooltip, Legend)
+
+export default {
+  name: 'App',
+  components: {
+    Pie
+  },
+  data() {
+    return chartConfig
+  }
+}
+</script>

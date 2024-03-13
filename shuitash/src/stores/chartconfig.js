@@ -2,7 +2,6 @@ async function getdata(borough) {
   let list = await fetch(`https://data.cityofnewyork.us/resource/swpk-hqdp.json`)
   let data = await list.json()
   let population = []
-  console.log(data)
   function sumArray(array) {
     let sum = 0;
     for (let i = 0; i < array.length; i++) {
@@ -17,28 +16,15 @@ async function getdata(borough) {
     }
   })
 
-
-  return(sumArray(population))
+return(sumArray(population))
 }
-
-async function main() {
-  try {
-    const sum = await getdata('Brooklyn');
-    console.log(sum);
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-main();
-
 
 export const data = {
-  labels: ['Brooklyn', 'Bronx', 'Queens', 'Manhatten', 'Staten Island'],
+  labels: ['Brooklyn', 'Bronx', 'Queens', 'Manhattan', 'Staten Island'],
   datasets: [
     {
-      backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16', '#DD1B17'],
-      data: [main(), 20, 80, 10, 200]
+      backgroundColor: ['#00C0FF', '#FE7E00', '#FF00C0', '#FE0000', '#00FF41'],
+      data: [await getdata("Brooklyn"), await getdata("Bronx"), await getdata("Queens"), await getdata("Manhattan"), await getdata("Staten Island")]
     }
   ]
 }
