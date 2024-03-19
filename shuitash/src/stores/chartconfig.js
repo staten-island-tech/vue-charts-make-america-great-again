@@ -18,7 +18,6 @@ async function getdata(borough) {
 
 return(sumArray(population))
 }
-
 export const data = {
   labels: ['Brooklyn', 'Bronx', 'Queens', 'Manhattan', 'Staten Island'],
   datasets: [
