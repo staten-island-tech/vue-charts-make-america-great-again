@@ -15,7 +15,7 @@ import {
   LinearScale
 } from 'chart.js'
 import { Bar } from 'vue-chartjs'
-import * as chartConfig from '../stores/genquestion'
+import * as chartConfig from '../stores/barconfig'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
@@ -34,4 +34,4 @@ export default {
 .bar{
 display: none;
 }
-</style>
+</style>../stores/barconfig
