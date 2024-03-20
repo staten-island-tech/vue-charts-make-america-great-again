@@ -1,5 +1,5 @@
 export const data = {
-  labels: ['VueJs', 'EmberJs', 'ReactJs', 'AngularJs'],
+  labels: ['Staten Island', 'Brooklyn','Queens',"Bronx"],
   datasets: [
     {
       backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],

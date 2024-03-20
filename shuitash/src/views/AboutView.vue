@@ -13,7 +13,7 @@ import * as chartConfig from '../stores/chartConfig'
 ChartJS.register(ArcElement, Tooltip, Legend)
 
 export default {
-  name: 'App',
+  name: 'Boroughs',
   components: {
     Doughnut
   },
