@@ -31,7 +31,5 @@ export default {
 </script>
 
 <style scoped>
-.bar{
-display: none;
-}
+
 </style>../stores/barconfig

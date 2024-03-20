@@ -1,25 +1,13 @@
-
+import { generate } from "@/main"
+let select = await generate()
 
 export const data = {
-    labels: [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December'
-    ],
+    labels: select[0],
     datasets: [
       {
         label: 'Population',
         backgroundColor: '#f87979',
-        data: [40, 20, 12, 39, 10, 40, 39, 80, 40, 20, 12, 11]
+        data: [select[1][0], select[1][1], select[1][2], select[1][3]]
       }
     ]
   }
