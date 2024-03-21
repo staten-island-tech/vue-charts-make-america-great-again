@@ -2,6 +2,7 @@
   <div class="bar">
   <Bar  :data="data" :options="options" />
   </div>
+  <p>{{ select[2][0] }}</p>
 </template>
 
 <script lang="ts">
@@ -16,6 +17,7 @@ import {
 } from 'chart.js'
 import { Bar } from 'vue-chartjs'
 import * as chartConfig from '../stores/barconfig'
+import { select } from '../stores/barconfig'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 

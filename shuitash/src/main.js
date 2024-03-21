@@ -62,5 +62,11 @@ export async function generate(){
     choices.push(gen.nta_name)
     population.push(gen.population)
   }
-  return[choices,population]
+
+  for(let i=0;i<4;i++){
+    if(Number(population[i])===Math.max(...population)){
+      answer.push(choices[i])
+    }
+  }
+  return[choices,population,answer]
 }

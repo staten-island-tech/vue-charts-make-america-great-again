@@ -1,5 +1,5 @@
 import { generate } from "@/main"
-let select = await generate()
+export const select = await generate()
 
 export const data = {
     labels: select[0],
