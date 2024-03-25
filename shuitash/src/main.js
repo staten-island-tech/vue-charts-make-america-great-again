@@ -51,6 +51,7 @@ export async function generate(){
   let choices = []
   let population = []
   let answer = []
+  let final = []
   data.forEach((i)=>{
     if(i.year==="2010"){
       pool.push(i)
@@ -68,6 +69,12 @@ export async function generate(){
       answer.push(choices[i])
     }
   }
-  return[choices,population,answer]
+
+  for(let i=0;i<4;i++){
+    const str = `${choices[i]},${population[i]}`
+    const thingy = str.split(',');
+    final.push(thingy)
+  }
+  return[final,answer]
 }
 

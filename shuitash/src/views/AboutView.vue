@@ -2,11 +2,12 @@
   <div class="bar">
   <Bar  :data="data" :options="options" />
   </div>
-  <p>{{ select[2][0] }}</p>
-  <p v-for="choice in select[0]" :key="choice">{{ choice }}</p>
+  <div>
+    <AnswerChoice v-for="choices in select[0]" :key="choices[0]" :Thing="choices"/>
+  </div>
 </template>
 
-<script lang="ts">
+<script>
 import {
   Chart as ChartJS,
   Title,
@@ -15,22 +16,25 @@ import {
   BarElement,
   CategoryScale,
   LinearScale
-} from 'chart.js'
-import { Bar } from 'vue-chartjs'
-import * as chartConfig from '../stores/barconfig'
-import { select } from '../stores/barconfig'
+} from 'chart.js';
+import { Bar } from 'vue-chartjs';
+import * as chartConfig from '../stores/barconfig';
+import { select } from '../stores/barconfig';
+import AnswerChoice from '@/components/AnswerChoice.vue';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 export default {
   name: 'App',
   components: {
-    Bar
+    Bar,
+    AnswerChoice
   },
   data() {
     return chartConfig
   }
 }
+
 </script>
 
 <style scoped>
