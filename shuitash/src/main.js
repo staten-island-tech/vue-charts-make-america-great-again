@@ -70,3 +70,4 @@ export async function generate(){
   }
   return[choices,population,answer]
 }
+

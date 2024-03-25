@@ -3,6 +3,7 @@
   <Bar  :data="data" :options="options" />
   </div>
   <p>{{ select[2][0] }}</p>
+  <p v-for="choice in select[0]" :key="choice">{{ choice }}</p>
 </template>
 
 <script lang="ts">

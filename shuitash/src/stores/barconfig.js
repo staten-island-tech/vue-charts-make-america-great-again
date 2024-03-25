@@ -7,7 +7,7 @@ export const data = {
       {
         label: 'Population',
         backgroundColor: '#f87979',
-        data: [select[1][0], select[1][1], select[1][2], select[1][3]]
+        data: select[1]
       }
     ]
   }
