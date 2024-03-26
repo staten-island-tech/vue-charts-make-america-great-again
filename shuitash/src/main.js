@@ -49,6 +49,7 @@ export async function generate(){
   let data = await getdata()
   let pool = []
   let choices = []
+  let boro = []
   let population = []
   let answer = []
   let final = []
@@ -61,6 +62,7 @@ export async function generate(){
   for(let i=0;i<4;i++){
     let gen = pool[Math.floor(Math.random()*pool.length)]
     choices.push(gen.nta_name)
+    boro.push(gen.borough)
     population.push(gen.population)
   }
 
@@ -71,7 +73,7 @@ export async function generate(){
   }
 
   for(let i=0;i<4;i++){
-    const str = `${choices[i]},${population[i]}`
+    const str = `${choices[i]},${population[i]},${boro[i]}`
     const thingy = str.split(',');
     final.push(thingy)
   }

@@ -3,7 +3,7 @@
   <Bar  :data="data" :options="options" />
   </div>
   <div>
-    <AnswerChoice v-for="choices in select[0]" :key="choices[0]" :Thing="choices"/>
+    <AnswerChoice v-for="area in select[0]" :key="area[0]" :Thing="area"/>
   </div>
 </template>
 
@@ -38,5 +38,7 @@ export default {
 </script>
 
 <style scoped>
-
-</style>../stores/barconfig
+.bar{
+  display: flex;
+}
+</style>
