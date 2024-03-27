@@ -11,6 +11,8 @@ import { select } from '@/stores/barconfig';
 function compare(name){
     if(name==select[1]){
     console.log("yay")
+ }else{
+    console.log("nay")
  }
 }
 
