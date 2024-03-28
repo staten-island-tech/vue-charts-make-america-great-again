@@ -1,17 +1,12 @@
 import { generate } from "@/main"
 
-const select1 = []
-export const select = select1[0]
+export let select = await generate()
 
-async function call(){
-  let select2 = await generate()
-  select1.push(select2)
+export async function call(){
+  let x = await generate()
+  select = x
 }
-
-
-call()
-select1.forEach((i)=>console.log(i))
-
+console.log(select)
 
 export const data = {
     labels: [select[0][0][0],select[0][1][0],select[0][2][0],select[0][3][0],],
@@ -26,5 +21,6 @@ export const data = {
   
   export const options = {
     responsive: true,
+    reactive: true,
     maintainAspectRatio: false
   }

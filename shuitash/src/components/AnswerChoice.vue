@@ -6,11 +6,11 @@
 </template>
 
 <script setup>
-import { select } from '@/stores/barconfig';
-
+import { call, select } from '@/stores/barconfig';
 function compare(name){
     if(name==select[1]){
-    console.log("yay")
+    console.log(`${select[1]}`)
+    call()
  }else{
     console.log("nay")
  }
