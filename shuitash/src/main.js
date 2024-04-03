@@ -80,3 +80,16 @@ export async function generate(){
   return[final,answer]
 }
 
+export async function twodata(borough){
+  let data = await getdata()
+  let name = []
+  let population = []
+  data.forEach((i)=>{
+    if(i.borough===borough && i.year==="2010"){
+      name.push(i.nta_name)
+      population.push(Number(i.population))
+    }
+  })
+  return({name,population})
+}
+
