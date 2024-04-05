@@ -14,6 +14,15 @@ app.use(router)
 app.mount('#app')
 
 
+let amongus = []
+async function grr(){
+  let list = await fetch(`https://data.cityofnewyork.us/resource/swpk-hqdp.json`)
+    let data = await list.json()
+    amongus = data
+}
+
+grr()
+
 async function getdata(){
   try{
     let list = await fetch(`https://data.cityofnewyork.us/resource/swpk-hqdp.json`)
@@ -25,8 +34,8 @@ async function getdata(){
     }
 }
 
-export async function filter(borough) {
-    let data = await getdata()
+export function filter(borough) {
+    let data = amongus
     let population = []
     function sumArray(array) {
       let sum = 0;
@@ -80,8 +89,8 @@ export async function generate(){
   return[final,answer]
 }
 
-export async function twodata(borough){
-  let data = await getdata()
+export function twodata(borough){
+  let data = amongus
   let name = []
   let population = []
   data.forEach((i)=>{

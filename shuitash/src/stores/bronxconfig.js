@@ -1,5 +1,5 @@
 import { twodata } from "@/main"
-let stuff = await twodata("Bronx")
+let stuff = twodata("Bronx")
 
 export const data = {
     labels: stuff.name,

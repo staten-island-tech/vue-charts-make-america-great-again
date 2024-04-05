@@ -5,7 +5,8 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <header>
       <nav class="wrapper">
-        <RouterLink to="/">All</RouterLink>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/all">All</RouterLink>
         <RouterLink to="/queens">Queens</RouterLink>
         <RouterLink to="/statenisland">Staten Island</RouterLink>
         <RouterLink to="/brooklyn">Brooklyn</RouterLink>
